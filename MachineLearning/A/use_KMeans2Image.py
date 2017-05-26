@@ -1,7 +1,7 @@
 import numpy as np
 import PIL.Image as image
 from sklearn.cluster import KMeans
- 
+
 def loadData(filePath):
     f = open(filePath,'rb')
     data = []
@@ -13,10 +13,10 @@ def loadData(filePath):
             data.append([x/256.0,y/256.0,z/256.0])
     f.close()
     return np.mat(data),m,n
- 
-imgData,row,col = loadData('full.jpeg')
+
+imgData,row,col = loadData('starbucks.jpg')
 label = KMeans(n_clusters=4).fit_predict(imgData)
- 
+
 label = label.reshape([row,col])
 pic_new = image.new("L", (row, col))
 for i in range(row):
