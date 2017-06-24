@@ -1,0 +1,6 @@
+model_checkpoint_path: "tetris-dqn-700000"
+all_model_checkpoint_paths: "tetris-dqn-660000"
+all_model_checkpoint_paths: "tetris-dqn-670000"
+all_model_checkpoint_paths: "tetris-dqn-680000"
+all_model_checkpoint_paths: "tetris-dqn-690000"
+all_model_checkpoint_paths: "tetris-dqn-700000"
