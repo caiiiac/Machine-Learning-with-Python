@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.linear_model import Ridge
-from sklearn import cross_validation
+from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
 
@@ -12,7 +12,7 @@ y = data[:,4]
 poly = PolynomialFeatures(6)
 X = poly.fit_transform(x)
 
-train_set_x, test_set_x, train_set_y, test_set_y = cross_validation.train_test_split(X,y,test_size=0.3,random_state=0)
+train_set_x, test_set_x, train_set_y, test_set_y = train_test_split(X,y,test_size=0.3,random_state=0)
 clf = Ridge(alpha=1.0,fit_intercept=True)
 clf.fit(train_set_x,train_set_y)
 clf.score(test_set_x,test_set_y)
