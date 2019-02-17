@@ -11,4 +11,4 @@ clf = GaussianNB(priors=None)
 
 # 使用fit()进行训练, 使用predict()进行预测, 
 clf.fit(X, y)
-print(clf.predict([-0.8, -1]))
+print(clf.predict([[-0.8, -1]]))
